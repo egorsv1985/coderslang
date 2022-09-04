@@ -1,9 +1,11 @@
 import express from 'express';
+import {logRequestType} from './middleware.js'
 
-const server = express();
+export const server = express();
 
-server.get('/', (req, res) => {
+server.use(logRequestType);
+
+server.get('/',(req, res, next) => {
   res.send('Learning to use middleware!');
+  next()
 })
-
-export { server };
