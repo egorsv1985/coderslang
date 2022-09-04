@@ -1,3 +1,4 @@
 export const pow = (x, y) => {
-  return 1;
+  let result = x**y;
+  return result;
 }
