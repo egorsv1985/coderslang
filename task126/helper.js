@@ -1,3 +1,7 @@
 export const allTheSame = (x, y, z) => {
-  return true;
-}
+  if (x === y && y === z && z === x) {
+    return true;
+  } else {
+    return false;
+  }
+};
